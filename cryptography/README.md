@@ -1,5 +1,12 @@
 # Cryptography Assignment
 
+### Task
+**Create a caesar cipher that adheres to the following rules**
+
+1. It will ask the user for a message to encrypt via input from the command line
+2. It will either ask the user for a shift number to use (any integer from 1-25) **or** use one that is hard-coded
+3. It will follow the code formatting/style guide below, returning the translated message to be printed in the main function
+
 ### Rules
 1. Asking your peers for help is okay, but try not to copy and paste their code
 2. If you get any code from peers or online sources, cite your sources
