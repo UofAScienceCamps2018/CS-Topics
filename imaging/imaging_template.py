@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """
 The name of your file
@@ -48,9 +48,9 @@ def main():
 	width = oldImage.getWidth()
 	height = oldImage.getHeight()
 	newImage = EmptyImage(width, height)
-	
+
 	for f in functions:
-		for row in range(height)
+		for row in range(height):
 			for col in range(width):
 				originalPixel = oldImage.getPixel(col, row)
 				newPixel = f(originalPixel)
@@ -63,19 +63,16 @@ def main():
 # Taking a pixel and making it completely blue
 def make_blue(old_pixel):
 	# Code here
-	return new_pixel
   
   
 # Constructing a negative pixel (negative = 255 - original)
 def negative_pixel(new_pixel):
 	# Code here
-	return new_pixel
 
 
 # Construct a grayscale pixel (Each RGB value is the average of the original pixel's red, green, and blue value)
 def grayscale(old_pixel):
 	# Code here
-	return new_pixel
 	
 
 if __name__ == "__main__":
