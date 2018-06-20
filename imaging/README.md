@@ -3,9 +3,9 @@
 ### Task
 A template to use will be provided to you [here](https://github.com/UofAScienceCamps2018/CS-Topics/blob/master/imaging/imaging_template.py)
 
-1. Write a function that changes every pixel in an image to blue
-2. Write a function that turns a given image into a [negative image](https://en.wikipedia.org/wiki/Negative_(photography)#Negative_image)
-3. Write a function that turns a given image into a grayscale image
+1. Write a function that changes a pixel in an image to blue
+2. Write a function that turns a given pixel into a negative pixel
+3. Write a function that turns a given pixel into a grayscale pixel
 
 ### Rules
 1. Asking your peers for help is okay, but try not to copy and paste their code
