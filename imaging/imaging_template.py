@@ -1,3 +1,15 @@
+#!/usr/bin/env python
+
+"""
+The name of your file
+Your first and last name
+
+Description of your file
+
+A link to any external sources you use
+*** looking online for help is fine, just make sure you provide a link to the websites you used ***
+"""
+
 # ============================================================================
 # Image processing with cImage
 # ============================================================================
