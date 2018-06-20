@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-File:
+File: substitution_template.py
 Name:
 
 Description:
