@@ -33,7 +33,15 @@ def main():
 
 # This will add the student data from the file into the dictinoary that was initiailzed in the main() function
 def populate_dicts(students, filename):
-    # Code here
+    datafile = open(filename)
+
+    for line in datafile.readlines():
+        cleaned = line.rstrip().split(',')
+        id_number, grade = "".join(cleaned[1].split()), eval("".join(cleaned[2].split()))
+        
+        students[cleaned[0]] = [id_number, grade]
+
+    datafile.close()
 
 
 # This will add the letter grades to the end of the dictionary keys
