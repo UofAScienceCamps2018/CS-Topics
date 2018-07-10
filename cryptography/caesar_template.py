@@ -6,28 +6,58 @@ Name:
 
 Description:
 Sources:
+
+** The only functions you should be modifying are encrypt() and decrypt() **
 """
 
+alphabet = "abcdefghijklmnopqrstuvwxyz"
 
-# WARNING: Aside from the line where the shift variable is initialized, don't touch this function.
+
 def main():
-    shift = None  # How the shift is calculated is up to you. This is the only line you should be changing.
+    original = input("Enter a message to encrypt: ")
+    n = 5
 
-    original = input("Enter word or phrase to encrypt: ")
-    ciphertext = encrypt(original, shift)
-    plaintext = decrypt(ciphertext, shift)
+    ciphertext = encrypt(n, original)
+    plaintext = decrypt(n, ciphertext)
 
-    print("Original text: ", original)
-    print("Encrypted text:", ciphertext)
-    print("Decrypted text:", plaintext)
+    print()
+    print("Original message:", original)
+    print("Encoded message: ", ciphertext)
+    print("Decoded message: ", plaintext)
+    print()
 
 
-def encrypt(text, shift):
+# Iterate through the plaintext and call shift() on each character to encode
+# Parameters: n (value to shift by), plaintext (decoded text to encode)
+# Return: ciphertext (encoded text)
+def encrypt(n, plaintext):
     # Code here
 
 
-def decrypt(text, shift):
+# Iterate through the plaintext and call shift() on each character to decode
+# Parameters: n (value to shift by), ciphertext (encoded text to decode)
+# Return: plaintext (decoded text)
+def decrypt(n, ciphertext):
     # Code here
+
+
+# Takes a string of a single character and encodes or decodes it according to it's index in <key>
+# Parameters: char (string of single character), n (value to shift by), mode (e for encode, d for decode)
+def shift(char, n, mode):
+    if mode.lower().startswith("e"):
+        try:
+            return alphabet[(alphabet.index(char) + n) % 26]
+        except ValueError:
+            return char
+
+    elif mode.lower().startswith("d"):
+        try:
+            return alphabet[(alphabet.index(char) - n) % 26]
+        except ValueError:
+            return char
+
+    else:
+        print("ERROR: Invalid mode selected")
 
 
 if __name__ == "__main__":
